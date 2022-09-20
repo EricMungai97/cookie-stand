@@ -38,12 +38,15 @@ let seattle = {
   // STEP 2: CREATE THE ELEMEN
 
   render: function () {
+    let articleElem = document.createElement('article');
+    salessection.appendChild(articleElem);
+
     let h1Elem = document.createElement('h1');
     h1Elem.textContent = this.City;
-    salessection.appendChild(h1Elem);
+    articleElem.appendChild(h1Elem);
     // STEP 3: GIVE CONTEXT IF NECESSARY
     let ulElem = document.createElement('ul');
-    salessection.appendChild(ulElem);
+    articleElem.appendChild(ulElem);
     // STEP 4: ADD IT TO THE DOM --> parent.appendChild(child to append);
     for (let i = 0; i < storeHours.length; i++) {
       let liElem = document.createElement('li');
@@ -77,12 +80,15 @@ let Tokyo = {
   },
 
   render: function () {
+    let articleElem = document.createElement('article');
+    salessection.appendChild(articleElem);
+
     let h2Elem = document.createElement('h2');
     h2Elem.textContent = this.City;
-    salessection.appendChild(h2Elem);
+    articleElem.appendChild(h2Elem);
 
     let ulElem = document.createElement('ul');
-    salessection.appendChild(ulElem);
+    articleElem.appendChild(ulElem);
 
     for (let i = 0; i < storeHours.length; i++) {
       let liElem = document.createElement('li');
@@ -114,12 +120,15 @@ let Dubai = {
   },
 
   render: function () {
+    let articleElem = document.createElement('article');
+    salessection.appendChild(articleElem);
+
     let h3Elem = document.createElement('h3');
     h3Elem.textContent = this.City;
-    salessection.appendChild(h3Elem);
+    articleElem.appendChild(h3Elem);
 
     let ulElem = document.createElement('ul');
-    salessection.appendChild(ulElem);
+    articleElem.appendChild(ulElem);
 
     for(let i = 0; i<storeHours.length; i++) {
       let liElem = document.createElement('li');
@@ -153,12 +162,15 @@ let paris = {
   },
 
   render: function () {
+    let articleElem = document.createElement('article');
+    salessection.appendChild(articleElem);
+
     let h4Elem = document.createElement('h4');
     h4Elem.textContent = this.City;
-    salessection.appendChild(h4Elem);
+    articleElem.appendChild(h4Elem);
 
     let ulElem = document.createElement('ul');
-    salessection.appendChild(ulElem);
+    articleElem.appendChild(ulElem);
 
     for (let i = 0; i < storeHours.length; i++) {
       let liElem = document.createElement('li');
@@ -191,12 +203,15 @@ let Lima = {
   },
 
   render: function () {
+    let articleElem = document.createElement('article');
+    salessection.appendChild(articleElem);
+
     let h5Elem = document.createElement('h5');
     h5Elem.textContent = this.City;
-    salessection.appendChild(h5Elem);
+    articleElem.appendChild(h5Elem);
 
     let ulElem = document.createElement('ul');
-    salessection.appendChild(ulElem);
+    articleElem.appendChild(ulElem);
 
     for (let i = 0; i < storeHours.length; i++) {
       let liElem = document.createElement('li');
