@@ -33,14 +33,16 @@ let seattle = {
     console.log(this.cookiesslh);
   },
 
+  // STEP 2: CREATE THE ELEMEN
+
   render: function () {
     let h1Elem = document.createElement('h1');
     h1Elem.textContent = this.City;
     salessection.appendChild(h1Elem);
-
+    // STEP 3: GIVE CONTEXT IF NECESSARY
     let ulElem = document.createElement('ul');
     salessection.appendChild(ulElem);
-
+    // STEP 4: ADD IT TO THE DOM --> parent.appendChild(child to append);
     for (let i = 0; i < storeHours.length; i++) {
       let liElem = document.createElement('li');
       liElem.textContent = `${storeHours[i]}: ${this.cookiesslh[i]} cookies`;
@@ -49,9 +51,6 @@ let seattle = {
   }
 };
 
-seattle.getcookiessldperh();
-seattle.render();
-seattle.getCustomers();
 
 let Tokyo = {
   City: 'Tokyo',
@@ -86,10 +85,6 @@ let Tokyo = {
   }
 };
 
-Tokyo.getcookiessldperh();
-Tokyo.render();
-Tokyo.getCustomers();
-
 let Dubai = {
   City: 'Dubai',
   Maxcust: 11,
@@ -122,10 +117,6 @@ let Dubai = {
   }
 
 };
-
-Dubai.getcookiessldperh();
-Dubai.render();
-Dubai.getCustomers();
 
 let paris = {
   City: 'Paris',
@@ -160,10 +151,6 @@ let paris = {
   }
 };
 
-paris.getcookiessldperh();
-paris.render();
-paris.getCustomers();
-
 let Lima = {
   City: 'Lima',
   Mincust: 23,
@@ -197,29 +184,23 @@ let Lima = {
   }
 };
 
+seattle.getcookiessldperh();
+seattle.render();
+seattle.getCustomers();
+
+Tokyo.getcookiessldperh();
+Tokyo.render();
+Tokyo.getCustomers();
+
+
+Dubai.getcookiessldperh();
+Dubai.render();
+Dubai.getCustomers();
+
+paris.getcookiessldperh();
+paris.render();
+paris.getCustomers();
+
 Lima.getcookiessldperh();
 Lima.render();
 Lima.getCustomers();
-
-
-// }
-
-// let Dubai = {
-//   Mincust: 11,
-//   Maxcust: 65,
-//   Avgcookiesale: 6.3
-// }
-
-// let Paris = {
-//   Mincust: 20,
-//   Maxcust: 38,
-//   Avgcookiesale: 2.3
-
-
-// }
-
-// let Lima = {
-//   Mincust: 2,
-//   Maxcust: 16,
-//   Avgcookiesale: 4.6
-//
