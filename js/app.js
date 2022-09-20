@@ -164,6 +164,42 @@ paris.getcookiessldperh();
 paris.render();
 paris.getCustomers();
 
+let Lima = {
+  City: 'Lima',
+  Mincust: 23,
+  Maxcust: 65,
+  cookiesslh: [],
+  Avgcookiesale: 6.3,
+  getCustomers: function () {
+    return randomCustomers(23, 65);
+  },
+  getcookiessldperh: function () {
+    for (let i = 0; i < storeHours.length; i++) {
+      let custthishour = this.getCustomers();
+      this.cookiesslh.push(Math.floor(custthishour * this.Avgcookiesale));
+    }
+    console.log(this.cookiesslh);
+  },
+
+  render: function () {
+    let h5Elem = document.createElement('h5');
+    h5Elem.textContent = this.City;
+    salessection.appendChild(h5Elem);
+
+    let ulElem = document.createElement('ul');
+    salessection.appendChild(ulElem);
+
+    for (let i = 0; i < storeHours.length; i++) {
+      let liElem = document.createElement('li');
+      liElem.textContent = `${storeHours[i]}: ${this.cookiesslh[i]} cookies`;
+      ulElem.appendChild(liElem);
+    }
+  }
+};
+
+Lima.getcookiessldperh();
+Lima.render();
+Lima.getCustomers();
 
 
 // }
