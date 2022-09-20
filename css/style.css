@@ -2,10 +2,34 @@
   background-color: beige;
 }
 
-h{
+h2{
+  font-family: sans-serif;
+  font-weight: bold;
+  color:coral;
+} 
+
+h3{
   font-family: sans-serif;
   font-weight: bold;
   color: brown;
+}
+
+h4{
+  font-family: sans-serif;
+  font-weight: bold;
+  color:indigo
+}
+
+h5{
+  font-family: sans-serif;
+  font-weight: bold;
+  color: mediumblue;
+}
+
+h6{
+  font-family: sans-serif;
+  font-weight: bold;
+  color:hotpink;
 }
 
 li{
