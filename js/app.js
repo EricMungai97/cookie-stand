@@ -41,9 +41,9 @@ let seattle = {
     let articleElem = document.createElement('article');
     salessection.appendChild(articleElem);
 
-    let h1Elem = document.createElement('h1');
-    h1Elem.textContent = this.City;
-    articleElem.appendChild(h1Elem);
+    let h2Elem = document.createElement('h2');
+    h2Elem.textContent = this.City;
+    articleElem.appendChild(h2Elem);
     // STEP 3: GIVE CONTEXT IF NECESSARY
     let ulElem = document.createElement('ul');
     articleElem.appendChild(ulElem);
@@ -83,9 +83,9 @@ let Tokyo = {
     let articleElem = document.createElement('article');
     salessection.appendChild(articleElem);
 
-    let h2Elem = document.createElement('h2');
-    h2Elem.textContent = this.City;
-    articleElem.appendChild(h2Elem);
+    let h3Elem = document.createElement('h3');
+    h3Elem.textContent = this.City;
+    articleElem.appendChild(h3Elem);
 
     let ulElem = document.createElement('ul');
     articleElem.appendChild(ulElem);
@@ -123,9 +123,9 @@ let Dubai = {
     let articleElem = document.createElement('article');
     salessection.appendChild(articleElem);
 
-    let h3Elem = document.createElement('h3');
-    h3Elem.textContent = this.City;
-    articleElem.appendChild(h3Elem);
+    let h4Elem = document.createElement('h4');
+    h4Elem.textContent = this.City;
+    articleElem.appendChild(h4Elem);
 
     let ulElem = document.createElement('ul');
     articleElem.appendChild(ulElem);
@@ -165,9 +165,9 @@ let paris = {
     let articleElem = document.createElement('article');
     salessection.appendChild(articleElem);
 
-    let h4Elem = document.createElement('h4');
-    h4Elem.textContent = this.City;
-    articleElem.appendChild(h4Elem);
+    let h5Elem = document.createElement('h5');
+    h5Elem.textContent = this.City;
+    articleElem.appendChild(h5Elem);
 
     let ulElem = document.createElement('ul');
     articleElem.appendChild(ulElem);
@@ -206,9 +206,9 @@ let Lima = {
     let articleElem = document.createElement('article');
     salessection.appendChild(articleElem);
 
-    let h5Elem = document.createElement('h5');
-    h5Elem.textContent = this.City;
-    articleElem.appendChild(h5Elem);
+    let h6Elem = document.createElement('h6');
+    h6Elem.textContent = this.City;
+    articleElem.appendChild(h6Elem);
 
     let ulElem = document.createElement('ul');
     articleElem.appendChild(ulElem);
