@@ -90,42 +90,42 @@ Tokyo.getcookiessldperh();
 Tokyo.render();
 Tokyo.getCustomers();
 
-// let Dubai = {
-//   City: 'Dubai',
-//   Maxcust: 11,
-//   Mincust: 38,
-//   Avgcookiesale: 3.7,
-//   cookiesslh: [],
-//   getCustomers: function () {
-//     return randomCustomers(11, 38);
-//   },
-//   getcookiessldperh: function () {
-//     for (let i = 0; i < storeHours.length; i++) {
-//       let custthishour = this.getCustomers();
-//       this.cookiesslh.push(Math.floor(custthishour * this.Avgcookiesale));
-//     }
-//   },
+let Dubai = {
+  City: 'Dubai',
+  Maxcust: 11,
+  Mincust: 38,
+  Avgcookiesale: 3.7,
+  cookiesslh: [],
+  getCustomers: function () {
+    return randomCustomers(11, 38);
+  },
+  getcookiessldperh: function () {
+    for (let i = 0; i < storeHours.length; i++) {
+      let custthishour = this.getCustomers();
+      this.cookiesslh.push(Math.floor(custthishour * this.Avgcookiesale));
+    }
+  },
 
-//   render: function () {
-//     let h3Elem = document.createElement('h3');
-//     h3Elem.textContent = this.City;
-//     salessection.appendChild(h3Elem);
+  render: function () {
+    let h3Elem = document.createElement('h3');
+    h3Elem.textContent = this.City;
+    salessection.appendChild(h3Elem);
 
-//     let ulElem = document.createElement('ul');
-//     salessection.appendChild(ulElem);
+    let ulElem = document.createElement('ul');
+    salessection.appendChild(ulElem);
 
-//     for(let i = 0; i<storeHours.length; i++) {
-//       let liElem = document.createElement('li');
-//       liElem.textContent = `${storeHours[i]}: ${this.cookiesslh[i]} cookies`;
-//       ulElem.appendChild(liElem);
-//     }
-//   }
+    for(let i = 0; i<storeHours.length; i++) {
+      let liElem = document.createElement('li');
+      liElem.textContent = `${storeHours[i]}: ${this.cookiesslh[i]} cookies`;
+      ulElem.appendChild(liElem);
+    }
+  }
 
-// };
+};
 
-// Dubai.getcookiessldperh();
-// Dubai.render();
-// Dubai.getCustomers();
+Dubai.getcookiessldperh();
+Dubai.render();
+Dubai.getCustomers();
 
 
 // }
