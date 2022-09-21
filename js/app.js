@@ -34,7 +34,7 @@ function Location(City, Mincust, Maxcust,Avgcookiesale){
 // ******* PROTOTYPE METHODS ********
 
 Location.prototype.getCustomers = function(){
-  return randomCustomers(23, 65);
+  return randomCustomers(this.Mincust, this.Maxcust);
 };
 
 Location.prototype.getcookiessldperh = function(){

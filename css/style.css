@@ -39,7 +39,10 @@ table, th, td {
 }
 
 table{
-  width: auto;
+  width: 60vw;
+  height: 50vh;
+  margin-top: 100px;
+  margin-left: 50px;
 }
 
 th, td{
