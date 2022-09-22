@@ -90,6 +90,35 @@ Location.prototype.render = function(){
   row2.appendChild(dailysaletotElem);
 };
 
+
+function renderfooter (){
+  let row3 = document.createElement('tr');
+  row3.textContent = 'Totals';
+  tableElem.appendChild(row3);
+
+  let Grandtotal = 0;
+
+  for (let i = 0; i < storeHours.length; i++){
+
+    let Total = 0;
+    for(let j = 0; j < SalesStandData.length; j++){
+      Total += SalesStandData[j].cookiesslh[i];
+
+    }
+    console.log(Total);
+    Grandtotal += Total;
+
+    let td1Elem = document.createElement('td');
+    td1Elem.textContent = Total;
+    row3.appendChild(td1Elem);
+  }
+
+  let td2Elem = document.createElement('td');
+  td2Elem.textContent = Grandtotal;
+  row3.appendChild(td2Elem);
+}
+
+
 // ***** CREATE OUR OBJECTS USING OUR CONSTRUCTOR ********
 
 new Location('Seattle', 23, 65, 6.3);
@@ -108,4 +137,4 @@ function renderAll(){
 }
 
 renderAll();
-
+renderfooter();
