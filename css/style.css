@@ -36,11 +36,11 @@ a{
 table, th, td {
   border: 1px solid;
   border-style: double;
+  width: 90%;
 }
 
 table{
-  width: 60vw;
-  height: 50vh;
+  width: 100%;
   margin-top: 100px;
   margin-left: 50px;
 }
