@@ -99,18 +99,19 @@ function renderfooter (){
   let Grandtotal = 0;
 
   for (let i = 0; i < storeHours.length; i++){
-
     let Total = 0;
     for(let j = 0; j < SalesStandData.length; j++){
       Total += SalesStandData[j].cookiesslh[i];
 
     }
     console.log(Total);
-    Grandtotal += Total;
 
     let td1Elem = document.createElement('td');
     td1Elem.textContent = Total;
     row3.appendChild(td1Elem);
+
+    Grandtotal += Total;
+
   }
 
   let td2Elem = document.createElement('td');
