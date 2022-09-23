@@ -6,10 +6,44 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <section id="Storesalesdata">
-  </section>
+  <div>
+    
+  <form id="SalesStandData-form">
+    <fieldset id="sales">
+      <legend>Sales Stand</legend>
+
+      <label for="LocationName">LocationName</label>
+      <input id="LocationName" type="text" name="LocationName">
+
+    </fieldset>
+    <fieldset id="customers">
+      <legend>Number of Customers</legend>
+
+      <label for="Mincust ">Mincust</label>
+      <input id="Mincust" type="number" name="Minicust">
+
+      <label for="Maxcust">Maxcust</label>
+      <input id="Maxcust" type="number" name="Maxcust">
+
+    </fieldset>
+    <fieldset id="cookie">
+      <legend>Sales</legend>
+
+      <label for="Avgcookiesale">Avgcookiesale</label>
+      <input id="Avgcookiesale" type="number" name="Avgcookiesale">
+
+    </fieldset>
+    <button type="submit">Submit</button>
+
+  </form>
+  </div>
+  <section id="Storesalesdata"></section>
   <a href ="index.html">Pat's Salmon Cookies</a>
-  <table id="class"></table>
+  <table id="class">
+    <thead></thead>
+    <tbody></tbody>
+    <tfoot id ="tablefooter"></tfoot>
+  </table>
   
 </body>
 <script src="js/app.js"></script>
