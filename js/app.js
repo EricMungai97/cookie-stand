@@ -6,7 +6,12 @@
 
 let salessection = document.getElementById('Storesalesdata');
 
+// **** STEP 1: GRAB THE ELEMENT TO LISTEN TO! ******
+let SalesStandform = document.getElementById('SalesStandData-form');
+
 let tableElem = document.getElementById('class');
+
+let tfoot = document.getElementById('tablefooter');
 
 console.dir(salessection);
 
@@ -90,11 +95,41 @@ Location.prototype.render = function(){
   row2.appendChild(dailysaletotElem);
 };
 
+// ** CALLED ON SUBMIT ACTION
+function handleSubmit(event){
+  // ** STOP DEFAULT BEHAVIOUR
+  event.preventDefault();
+
+  // ** GATHER INFORMATION FROM FROM**
+  let City = event.target.LocationName.value;
+  let Mincust = event.target.Mincust.value;
+  let Maxcust = event.target.Maxcust.value;
+  let Avgcookiesale = event.target.Avgcookiesale.value;
+
+  // ** CREATE NEW LOCATIONOBJECT VIA CONSTRUCTOR **
+  let newLocation = new Location(City, Mincust, Maxcust,Avgcookiesale);
+
+  // ** RENDER OUR LOCATION ON SCREEN **
+  newLocation.getCustomers();
+  newLocation.getcookiessldperh();
+  newLocation.render();
+
+  // ** CLEAR FORM FOR THE NEXT INPUT **
+  SalesStandform.reset();
+
+  tfoot.textContent = '';
+  // deletes tfoot content
+  renderfooter();
+}
+
+// ****** STEP 2: ATTACH EVENT LISTENER: type of event, and our callback function or event handler ******
+SalesStandform.addEventListener('submit', handleSubmit);
 
 function renderfooter (){
+
   let row3 = document.createElement('tr');
   row3.textContent = 'Totals';
-  tableElem.appendChild(row3);
+  tfoot.appendChild(row3);
 
   let Grandtotal = 0;
 
