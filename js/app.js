@@ -117,7 +117,7 @@ function handleSubmit(event){
   // ** CLEAR FORM FOR THE NEXT INPUT **
   SalesStandform.reset();
 
-  tfoot.textContent = '';
+  tfoot.deleteTfoot();
   // deletes tfoot content
   renderfooter();
 }
